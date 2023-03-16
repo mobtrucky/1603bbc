@@ -1,0 +1,30 @@
+{
+    "name": "34",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "pxt-SEN-Color": "github:joy-it/pxt-sen-color#1.0.1",
+        "colorbit": "github:51bit/colorbit#v0.1.3",
+        "Module-World": "github:YahboomTechnology/Module-World#4bad43a8128f8529d911b0033e7062d7972a5cf4",
+        "servo": "*",
+        "Module_World_Color": "github:YahboomTechnology/module_world_color#70b5ef663fd1e4034cd0bc53ce4ba97779f30a78"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "5.0.12",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
