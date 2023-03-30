@@ -1,44 +1,26 @@
 radio.onReceivedNumber(function (receivedNumber) {
     // Branco e branco
-    if (receivedNumber == 0 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 254 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 254 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 254))) {
-        servos.P1.run(50)
-        servos.P2.run(-50)
+    if (receivedNumber == 0 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 230 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 230 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 230))) {
+        servos.P1.run(100)
+        servos.P2.run(-100)
     }
     // Preto e preto
-    if (receivedNumber == 1 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) == 0 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) == 0 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) == 0))) {
-        servos.P1.run(50)
-        servos.P2.run(50)
+    if (receivedNumber == 1 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 20 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) < 20 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 70))) {
+        servos.P1.run(100)
+        servos.P2.run(-100)
     }
     // Branco e preto
-    if (receivedNumber == 0 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) == 0 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) == 0 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) == 0))) {
+    if (receivedNumber == 0 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 20 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) < 20 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 70))) {
         servos.P1.run(-50)
         servos.P2.run(-50)
     }
     // Preto e branco
-    if (receivedNumber == 1 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 254 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 254 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 254))) {
+    if (receivedNumber == 1 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 230 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 230 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 230))) {
         servos.P1.run(50)
-        servos.P2.run(-50)
+        servos.P2.run(50)
     }
 })
+basic.showNumber(3)
 basic.forever(function () {
-    // Branco e branco
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 254 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 254 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 254)) {
-        servos.P1.run(50)
-        servos.P2.run(-50)
-    }
-    // Branco e Preto
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 254 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 254 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 254)) {
-        servos.P1.run(50)
-        servos.P2.run(-50)
-    }
-    // Preto e Branco
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 254 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 254 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 254)) {
-        servos.P1.run(50)
-        servos.P2.run(-50)
-    }
-    // Preto e Preto
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 254 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 254 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 254)) {
-        servos.P1.run(50)
-        servos.P2.run(-50)
-    }
+    radio.setGroup(42)
 })
