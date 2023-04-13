@@ -9,7 +9,9 @@
         "colorbit": "github:51bit/colorbit#v0.1.3",
         "Module-World": "github:YahboomTechnology/Module-World#4bad43a8128f8529d911b0033e7062d7972a5cf4",
         "servo": "*",
-        "Module_World_Color": "github:YahboomTechnology/module_world_color#70b5ef663fd1e4034cd0bc53ce4ba97779f30a78"
+        "Module_World_Color": "github:YahboomTechnology/module_world_color#70b5ef663fd1e4034cd0bc53ce4ba97779f30a78",
+        "radio-broadcast": "*",
+        "pxt-radio-firefly": "github:microsoft/pxt-radio-firefly#v0.1.4"
     },
     "files": [
         "main.blocks",
