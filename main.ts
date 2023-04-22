@@ -6,36 +6,28 @@ enum RadioMessage {
 }
 radio.onReceivedMessage(RadioMessage.verde, function () {
     // Preto e verde
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 170 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 70 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) < 170)) {
-        // Preto e preto
-        if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 70 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 70 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 70)) {
-            servos.P2.stop()
-            servos.P1.stop()
-        }
+    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 39 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 250 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) < 39)) {
+        basic.showString("v")
     }
 })
 radio.onReceivedMessage(RadioMessage.branco, function () {
     // Branco e branco
     if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 30 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 30 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 30)) {
-        servos.P1.run(25)
-        servos.P2.run(-25)
+        basic.showString("bb")
     }
     // Branco e preto
     if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 40 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) < 40 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 50)) {
-        servos.P1.run(25)
-        servos.P2.run(25)
+        basic.showString("bp")
     }
 })
 radio.onReceivedMessage(RadioMessage.preto, function () {
     // Preto e preto
     if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 40 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) < 40 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 50)) {
-        servos.P1.run(25)
-        servos.P2.run(-25)
+        basic.showString("pp")
     }
     // Preto e branco
     if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) > 30 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 30 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 30)) {
-        servos.P1.run(-25)
-        servos.P2.run(-25)
+        basic.showString("pb")
     }
 })
 radio.setGroup(5)
