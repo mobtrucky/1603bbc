@@ -39,14 +39,27 @@ radio.onReceivedMessage(RadioMessage.preto, function () {
 radio.setGroup(5)
 basic.showNumber(3)
 basic.forever(function () {
-    // Branco e preto
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 25 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) < 25 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) > 150)) {
+    // branco
+    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) >= 36 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) >= 85 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) == 255)) {
+        servos.P1.run(20)
+        servos.P2.run(-20)
+        // 1 branco preto
+        basic.showString("b")
+        basic.clearScreen()
+    }
+    // preto
+    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 36 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) < 85 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) == 255)) {
+        servos.P1.run(-20)
+        servos.P2.run(20)
         // 1 branco preto
         basic.showString("p")
         basic.clearScreen()
     }
-    // Preto e verde
-    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 39 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) > 250 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) < 39)) {
+    // preto
+    if (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueR) < 57 && (Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueG) == 255 && Module_World_Color.GetRGBValue(Module_World_Color.enGetRGB.GetValueB) < 38)) {
+        servos.P1.run(-50)
+        servos.P2.run(-50)
+        // 1 branco preto
         basic.showString("v")
         basic.clearScreen()
     }
