@@ -11,7 +11,8 @@
         "servo": "*",
         "Module_World_Color": "github:YahboomTechnology/module_world_color#70b5ef663fd1e4034cd0bc53ce4ba97779f30a78",
         "radio-broadcast": "*",
-        "pxt-radio-firefly": "github:microsoft/pxt-radio-firefly#v0.1.4"
+        "pxt-radio-firefly": "github:microsoft/pxt-radio-firefly#v0.1.4",
+        "tm1650": "github:YahboomTechnology/tm1650#d74a76c7400108f4658351d4a0e743fc776f3493"
     },
     "files": [
         "main.blocks",
